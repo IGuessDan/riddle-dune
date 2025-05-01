@@ -8,7 +8,12 @@
 <body>
   <div class="container">
     <h1>Trial of Sound</h1>
-    <p><strong>Riddle:</strong> I’m tall when I’m young, and I’m short when I’m old.<br>What am I under the twin moons of Arrakis?</p>
+    <p><strong>Riddle:</strong> Tiny shadow of the endless sand,<br>
+      Swift and silent, no weapon in hand.<br>
+      I survive where empires fall,<br>
+      In moonlight’s hush, I hear the call.<br>
+      They named me this, both fierce and small —<br>
+      What am I, beneath it all?</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="message"></p>
@@ -22,8 +27,8 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "candle") {
-        window.location.href = "candle.html";
+      if (input === "muaddib") {
+        window.location.href = "muaddib.html";
       } else {
         document.getElementById("message").textContent = "The answer eludes you...";
       }
