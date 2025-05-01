@@ -8,7 +8,7 @@
 <body>
   <div class="container">
     <h1>The Desert Test Begins</h1>
-    <p><strong>Riddle:</strong> I speak without a mouth and hear without ears. I have no body, but I come alive with wind.<br>What am I, wanderer of Arrakis?</p>
+    <p><strong>Riddle:</strong> I dance on the wind and burn in your mind, <br>Sought by empires, yet born of death. <br>Without me, no journey through stars. <br>What am I?</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="message"></p>
@@ -22,7 +22,7 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "echo") {
+      if (input === "Spice") {
         window.location.href = "echo.html";
       } else {
         document.getElementById("message").textContent = "Not yet, seeker. Try again.";
