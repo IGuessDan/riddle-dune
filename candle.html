@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Footsteps in the Sand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Footsteps in the Sand</h1>
+    <p><strong>Riddle:</strong> The more you take, the more you leave behind.<br>What are they, Fremen traveler?</p>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="desert-wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "footsteps") {
+        window.location.href = "footsteps.html";
+      } else {
+        document.getElementById("message").textContent = "You’ve wandered off the path. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
