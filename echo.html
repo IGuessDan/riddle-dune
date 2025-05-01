@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trial of Sound</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Trial of Sound</h1>
+    <p><strong>Riddle:</strong> I’m tall when I’m young, and I’m short when I’m old.<br>What am I under the twin moons of Arrakis?</p>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="desert-wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "candle") {
+        window.location.href = "candle.html";
+      } else {
+        document.getElementById("message").textContent = "The answer eludes you...";
+      }
+    }
+  </script>
+</body>
+</html>
