@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>The Desert Test Begins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>The Desert Test Begins</h1>
+    <p><strong>Riddle:</strong> I speak without a mouth and hear without ears. I have no body, but I come alive with wind.<br>What am I, wanderer of Arrakis?</p>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="desert-wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "echo") {
+        window.location.href = "echo.html";
+      } else {
+        document.getElementById("message").textContent = "Not yet, seeker. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
