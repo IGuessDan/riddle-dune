@@ -8,7 +8,12 @@
 <body>
   <div class="container">
     <h1>Footsteps in the Sand</h1>
-    <p><strong>Riddle:</strong> The more you take, the more you leave behind.<br>What are they, Fremen traveler?</p>
+    <p><strong>Riddle:</strong> I rise from dunes in thunder’s roar,<br>
+      With teeth like blades and ancient lore.<br>
+      Both god and beast beneath the sky,<br>
+      The spice is born where I pass by.<br>
+      Fear my path, but speak my name —<br>
+      What stirs the sand in fire and flame?</p>
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="message"></p>
@@ -22,8 +27,8 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "footsteps") {
-        window.location.href = "footsteps.html";
+      if (input === "shaihulud") {
+        window.location.href = "shaihulud.html";
       } else {
         document.getElementById("message").textContent = "You’ve wandered off the path. Try again.";
       }
