@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Footsteps in the Sand</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Footsteps in the Sand</h1>
+    <p><strong>Riddle:</strong> In which youtube video do I say a Truman Show Quote at the end of the video, include the full title as your answer</p>
+    <input type="text" id="answer" placeholder="Enter your answer">
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="message"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="desert-wind.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "Can Your PC Run Dune Awakening? Benchmark & Settings Guide!") {
+        window.location.href = "shaihulud.html";
+      } else {
+        document.getElementById("message").textContent = "You’ve wandered off the path. Try again.";
+      }
+    }
+  </script>
+  <script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+    }, 2000);
+  });
+</script>
+</body>
+  <div id="loading-screen" style="position:fixed;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5c400;z-index:9999;font-size:1.5em;font-family:'Georgia',serif;">
+  “Fear is the mind-killer...”<br><br>Loading...
+</div>
+</html>
