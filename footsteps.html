@@ -6,6 +6,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <canvas id="spiceCanvas"></canvas>
+
   <div class="container">
     <h1>🜲 You Are the Kwisatz Haderach</h1>
     <p>You have passed all the trials of Arrakis...</p>
@@ -15,7 +17,47 @@
 
   <audio autoplay loop>
     <source src="desert-wind.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
+
+  <script>
+    const canvas = document.getElementById('spiceCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const particles = [];
+    for (let i = 0; i < 150; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: Math.random() * 3 + 1,
+        speed: Math.random() * 1 + 0.5,
+        alpha: Math.random()
+      });
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let p of particles) {
+        ctx.beginPath();
+        ctx.fillStyle = `rgba(170, 75, 255, ${p.alpha})`;
+        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+        ctx.fill();
+
+        p.y -= p.speed;
+        if (p.y < 0) {
+          p.y = canvas.height;
+          p.x = Math.random() * canvas.width;
+        }
+      }
+      requestAnimationFrame(animateParticles);
+    }
+
+    animateParticles();
+    window.addEventListener('resize', () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
 </body>
 </html>
