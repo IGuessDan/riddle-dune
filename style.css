@@ -1,59 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap');
-
 body {
-  font-family: 'Cinzel', serif;
-  background: url('https://images.unsplash.com/photo-1612837017391-1c6527b9e7d2?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
-  background-size: cover;
-  color: #f9e4b7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('https://images.unsplash.com/photo-1603048290513-bf3d8b55092c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80') no-repeat center center fixed;
+  background-size: cover;
+  color: #f0eadd;
+  text-align: center;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
 .container {
-  background: rgba(34, 27, 17, 0.85);
-  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2em;
+  margin: 5vh auto;
   border-radius: 12px;
-  box-shadow: 0 0 30px rgba(255, 184, 71, 0.4);
   max-width: 600px;
-  text-align: center;
-  border: 1px solid #c97e2e;
+  box-shadow: 0 0 15px #bb86fc;
 }
 
-h1 {
-  font-size: 2em;
-  color: #f6d06f;
+input, button {
+  padding: 0.5em;
+  margin: 1em 0;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
 }
 
 input {
-  padding: 12px;
-  font-size: 16px;
-  margin: 12px 0;
   width: 80%;
-  border: 1px solid #d89c47;
-  background-color: #3c2a17;
-  color: #fff8e1;
-  border-radius: 6px;
 }
 
 button {
-  padding: 10px 24px;
-  font-size: 16px;
-  background: #b27e34;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  background-color: #bb86fc;
+  color: #fff;
   cursor: pointer;
 }
 
-button:hover {
-  background: #e5a64f;
+.secret {
+  font-size: 1.2em;
+  margin-top: 2em;
+  color: #ffdf91;
 }
 
-.secret {
-  margin-top: 20px;
-  font-size: 18px;
-  color: #ffda7a;
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
 }
