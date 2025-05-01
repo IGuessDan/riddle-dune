@@ -8,7 +8,9 @@
 <body>
   <div class="container">
     <h1>Footsteps in the Sand</h1>
-    <p><strong>Riddle:</strong> In which youtube video do I say a Truman Show Quote at the end of the video, only put the capital letters from the youtube title as your answer (no spaces or apostrophes in your answer)</p>
+    <p><strong>Riddle:</strong> In which YouTube video do I say a Truman Show quote at the end of the video? <br>
+    Only put the capital letters from the YouTube title as your answer (no spaces or apostrophes).</p>
+
     <input type="text" id="answer" placeholder="Enter your answer">
     <button onclick="checkAnswer()">Submit</button>
     <p id="message"></p>
@@ -21,7 +23,7 @@
 
   <script>
     function checkAnswer() {
-      const input = document.getElementById("answer").value.toLowerCase().trim();
+      const input = document.getElementById("answer").value.trim(); // no lowercase
       if (input === "CYPCRDABSG") {
         window.location.href = "end.html";
       } else {
@@ -29,15 +31,17 @@
       }
     }
   </script>
+
   <script>
-  window.addEventListener('load', () => {
-    setTimeout(() => {
-      document.getElementById('loading-screen').style.display = 'none';
-    }, 2000);
-  });
-</script>
-</body>
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('loading-screen').style.display = 'none';
+      }, 2000);
+    });
+  </script>
+
   <div id="loading-screen" style="position:fixed;top:0;left:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:#000;color:#f5c400;z-index:9999;font-size:1.5em;font-family:'Georgia',serif;">
-  “Fear is the mind-killer...”<br><br>Loading...
-</div>
+    “Fear is the mind-killer...”<br><br>Loading...
+  </div>
+</body>
 </html>
